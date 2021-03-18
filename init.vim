@@ -164,7 +164,10 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 
 
-
+"/
+"/ Netrw - built in
+"/
+let g:netrw_liststyle=3         " tree view
 
 
 "-------------Auto-Commands--------------"
