@@ -29,7 +29,8 @@ Plug 'pangloss/vim-javascript'        " Javascript Syntax
 Plug 'leafgarland/typescript-vim'     " Typescript Syntax
 Plug 'MaxMEllon/vim-jsx-pretty'       " Javascript jsx formatting
 Plug 'peitalin/vim-jsx-typescript'    " Typescript tsx formatting
-Plug 'preservim/nerdcommenter'        " Comments
+Plug 'tpope/vim-commentary'           " Comments (gc)
+Plug 'christoomey/vim-sort-motion'    " Sort using text objects and motions (gs)
 
 " Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
