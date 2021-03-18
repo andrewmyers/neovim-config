@@ -15,6 +15,9 @@ let g:coc_global_extensions = [
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
+" GraphQL Syntax
+Plug 'jparise/vim-graphql'
+
 
 " File Explorer with Icons
 Plug 'scrooloose/nerdtree'

@@ -40,8 +40,8 @@ set complete=.,w,b,u   			                    " Autocomplete setting
 "-------------Visuals--------------"
 set t_CO=256							        " Use 256 colors. This is useful for Terminal Vim.
 set termguicolors     " enable true colors support
-let ayucolor="light"  " for light version of theme
-"let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="light"  " for light version of theme
+let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 let g:airline_theme='papercolor'
