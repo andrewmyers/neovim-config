@@ -119,8 +119,8 @@ nmap <Leader><space> :nohlsearch<cr>
 nmap <Leader>n :NERDTreeToggle<cr>
 nmap <Leader>nr :NERDTree %<cr>
 
-nmap <Leader>r :CtrlPBufTag<cr>
-nmap <Leader>m :CtrlPMRUFiles<cr>
+nmap <C-r> :CtrlPBufTag<cr>
+nmap <C-m> :CtrlPMRUFiles<cr>
 
 " Escape with jj
 imap jj <Esc>
