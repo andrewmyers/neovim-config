@@ -1,10 +1,12 @@
 let initPath= stdpath('config') . '/init.vim'
 let pluginsPath=stdpath('config') . '/plugins.vim'
 let conquerOfCompletionPath=stdpath('config') . '/coc.vim'
+let markdownPreviewPath = stdpath('config') . '/markdown-preview.vim'
 
 " Load the plugins and conquer of completion
 exec "source " . pluginsPath
 exec "source " . conquerOfCompletionPath
+exec "source " . markdownPreviewPath
 
 
 set clipboard+=unnamedplus                      " Use the system clipboard
@@ -99,6 +101,7 @@ nnoremap <A-l> <C-w>l
 nmap <Leader>ev :exec 'edit ' .initPath<cr>
 nmap <Leader>ep :exec 'edit ' .pluginsPath<cr>
 nmap <Leader>ec :exec 'edit ' .conquerOfCompletionPath<cr>
+nmap <Leader>em :exec 'edit ' .markdownPreviewPath<cr>
 
 " paste the previous yank
 nmap <Leader>k "2p
