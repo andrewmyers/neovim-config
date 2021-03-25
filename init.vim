@@ -124,6 +124,10 @@ nmap <Leader>nr :NERDTree %<cr>
 
 " Escape with jj
 imap jj <Esc>
+
+" Rename
+nmap <leader>rn <Plug>(coc-rename)
+
 "}}}
 
 "{{{ Plugins
