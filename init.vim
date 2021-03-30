@@ -49,10 +49,12 @@ set complete=.,w,b,u   			                    " Autocomplete setting
 set t_CO=256							        " Use 256 colors. This is useful for Terminal Vim.
 set termguicolors                 " enable true colors support
 "let ayucolor="light"             " for light version of theme
-let ayucolor="mirage"             " for mirage version of theme
-"let ayucolor="dark"              " for dark version of theme
-colorscheme ayu"{{{}}}
+"let ayucolor="mirage"             " for mirage version of theme
+let ayucolor="dark"              " for dark version of theme
+colorscheme ayu"
 let g:airline_theme='papercolor'
+"set background=light
+"colorscheme intellij
 "}}}
 
 "{{{ Search
@@ -162,23 +164,23 @@ let g:netrw_liststyle=3         " tree view
 "}}}
 
 "{{{ Folding
-augroup folds
-  autocmd FileType vim setlocal foldmethod=marker
-  autocmd BufWinEnter * silent! :%foldopen!
-  autocmd FileType javascript,typescript,typescriptreact setlocal foldmethod=expr
-  autocmd FileType javascript,typescript,typescriptreact setlocal foldexpr=JSFolds()
-augroup END
+" augroup folds
+"   autocmd FileType vim setlocal foldmethod=marker
+"   autocmd BufRead * silent! :%foldopen!
+"   autocmd FileType javascript,typescript,typescriptreact setlocal foldmethod=expr
+"   autocmd FileType javascript,typescript,typescriptreact setlocal foldexpr=JSFolds()
+" augroup END
 
-function! JSFolds()
-  let thisline = getline(v:lnum)
-  if thisline =~? '\v^\s*$'
-    return '-1'
-  endif
+" function! JSFolds()
+"   let thisline = getline(v:lnum)
+"   if thisline =~? '\v^\s*$'
+"     return '-1'
+"   endif
 
-  if thisline =~ '^import.*$'
-    return 1
-  else
-    return indent(v:lnum) / &shiftwidth
-  endif
-endfunction
+"   if thisline =~ '^import.*$'
+"     return 1
+"   else
+"     return indent(v:lnum) / &shiftwidth
+"   endif
+" endfunction
 "}}}

@@ -37,6 +37,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Theme
 Plug 'ayu-theme/ayu-vim'
+Plug 'chiendo97/intellij.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
