@@ -31,6 +31,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'       " Javascript jsx formatting
 Plug 'peitalin/vim-jsx-typescript'    " Typescript tsx formatting
 Plug 'tpope/vim-commentary'           " Comments (gc)
 Plug 'christoomey/vim-sort-motion'    " Sort using text objects and motions (gs)
+Plug 'Olical/conjure', {'tag': 'v4.17.0'} " Clojure
 
 " Prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }

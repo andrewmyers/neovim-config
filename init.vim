@@ -50,11 +50,19 @@ set t_CO=256							        " Use 256 colors. This is useful for Terminal Vim.
 set termguicolors                 " enable true colors support
 "let ayucolor="light"             " for light version of theme
 "let ayucolor="mirage"             " for mirage version of theme
-let ayucolor="dark"              " for dark version of theme
-colorscheme ayu"
+"let ayucolor="dark"              " for dark version of theme
+"colorscheme ayu"
 let g:airline_theme='papercolor'
 "set background=light
-"colorscheme intellij
+colorscheme intellij
+
+"}}}
+
+"{{{ Neovide
+set guifont=SourceCodePro\ Nerd\ Font:h16
+set mouse=a
+let g:neovide_fullscreen=v:true
+let g:neovide_cursor_antialiasing=v:true
 "}}}
 
 "{{{ Search
@@ -161,15 +169,17 @@ let g:airline#extensions#tabline#enabled = 1
 "/
 let g:netrw_liststyle=3         " tree view
 
+
+
 "}}}
 
 "{{{ Folding
-" augroup folds
-"   autocmd FileType vim setlocal foldmethod=marker
-"   autocmd BufRead * silent! :%foldopen!
-"   autocmd FileType javascript,typescript,typescriptreact setlocal foldmethod=expr
-"   autocmd FileType javascript,typescript,typescriptreact setlocal foldexpr=JSFolds()
-" augroup END
+ augroup folds
+   autocmd FileType vim setlocal foldmethod=marker
+   " autocmd BufRead * silent! :%foldopen!
+   " autocmd FileType javascript,typescript,typescriptreact setlocal foldmethod=expr
+   " autocmd FileType javascript,typescript,typescriptreact setlocal foldexpr=JSFolds()
+ augroup END
 
 " function! JSFolds()
 "   let thisline = getline(v:lnum)
