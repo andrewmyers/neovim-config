@@ -20,7 +20,6 @@ Plug 'jparise/vim-graphql'
 
 
 " File Explorer with Icons
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-vinegar'		          " Enhance directory browser
 Plug 'ctrlpvim/ctrlp.vim'		          " Find file with ctrl p
 Plug 'tpope/vim-surround' 		        " Surround Plugin: Change Surrounding text
@@ -37,10 +36,10 @@ Plug 'Olical/conjure', {'tag': 'v4.17.0'} " Clojure
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Theme
-Plug 'ayu-theme/ayu-vim'
 Plug 'chiendo97/intellij.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}

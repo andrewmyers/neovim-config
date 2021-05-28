@@ -48,14 +48,8 @@ set complete=.,w,b,u   			                    " Autocomplete setting
 "{{{ Visuals
 set t_CO=256							        " Use 256 colors. This is useful for Terminal Vim.
 set termguicolors                 " enable true colors support
-"let ayucolor="light"             " for light version of theme
-"let ayucolor="mirage"             " for mirage version of theme
-"let ayucolor="dark"              " for dark version of theme
-"colorscheme ayu"
-let g:airline_theme='papercolor'
-"set background=light
-colorscheme intellij
-
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
 "}}}
 
 "{{{ Neovide
@@ -128,10 +122,6 @@ nmap <Leader>bd :bd<cr>
 "Add simple highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
 
-"Make NERDTree easier to toggle.
-nmap <Leader>n :NERDTreeToggle<cr>
-nmap <Leader>nr :NERDTree %<cr>
-
 " Escape with jj
 imap jj <Esc>
 
@@ -148,15 +138,6 @@ nmap <leader>rn <Plug>(coc-rename)
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|music'
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
-"/
-"/ NERDTree
-"/
-let NERDTreeHijackNetrw = 0
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
-
 
 "/
 "/ Airline
@@ -167,30 +148,19 @@ let g:airline#extensions#tabline#enabled = 1
 "/
 "/ Netrw - built in
 "/
-let g:netrw_liststyle=3         " tree view
+let g:netrw_banner = 0          " enable/disable banner
+let g:netrw_liststyle = 3       " expand directorories instead of opening in a new tab
+let g:netrw_browse_split = 4    " open in previous window to the right
+let g:netrw_altv = 1          
+let g:netrw_winsize = 15        " set the width of the window
 
-
+" open with space n
+nmap <Leader>n :Lexplore<cr>
 
 "}}}
 
 "{{{ Folding
  augroup folds
    autocmd FileType vim setlocal foldmethod=marker
-   " autocmd BufRead * silent! :%foldopen!
-   " autocmd FileType javascript,typescript,typescriptreact setlocal foldmethod=expr
-   " autocmd FileType javascript,typescript,typescriptreact setlocal foldexpr=JSFolds()
  augroup END
-
-" function! JSFolds()
-"   let thisline = getline(v:lnum)
-"   if thisline =~? '\v^\s*$'
-"     return '-1'
-"   endif
-
-"   if thisline =~ '^import.*$'
-"     return 1
-"   else
-"     return indent(v:lnum) / &shiftwidth
-"   endif
-" endfunction
 "}}}
