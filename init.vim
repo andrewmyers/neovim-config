@@ -128,6 +128,9 @@ imap jj <Esc>
 " Rename
 nmap <leader>rn <Plug>(coc-rename)
 
+" Copy file path
+nmap <leader>cp :let @+ = expand("%")<cr>
+
 "}}}
 
 "{{{ Plugins
