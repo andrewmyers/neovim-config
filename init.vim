@@ -29,10 +29,10 @@ set noerrorbells visualbell t_vb=               " No bells
 set autowriteall 		                            " Automaticall write the buffer when switching files
 
 "{{{ Tabs
-set tabstop=2                                   " Width of the tab key
-set shiftwidth=2                                " Number of spaces for tabs in normal mode
+set tabstop=4                                   " Width of the tab key
+set shiftwidth=4                                " Number of spaces for tabs in normal mode
 set expandtab                                   " Use spaces instead of tabs
-set softtabstop=2                               " Number of spaces per tab in insert mode
+set softtabstop=4                               " Number of spaces per tab in insert mode
 set autoindent
 "}}}
 
@@ -48,7 +48,7 @@ set complete=.,w,b,u   			                    " Autocomplete setting
 "{{{ Visuals
 set t_CO=256							        " Use 256 colors. This is useful for Terminal Vim.
 set termguicolors                 " enable true colors support
-colorscheme onehalfdark
+colorscheme intellij
 let g:airline_theme='onehalfdark'
 "}}}
 
@@ -119,6 +119,7 @@ nmap <Leader>bp :bp<cr>
 nmap <Leader>bn :bn<cr>
 nmap <Leader>bd :bd<cr>
 
+
 "Add simple highlight removal.
 nmap <Leader><space> :nohlsearch<cr>
 
@@ -130,6 +131,13 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " Copy file path
 nmap <leader>cp :let @+ = expand("%")<cr>
+
+"}}}
+
+"{{{ Commands
+
+" Close all other buffers
+command! BufOnly silent! execute "%bd\|e#\|bd#"
 
 "}}}
 
