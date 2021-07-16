@@ -160,14 +160,48 @@ let g:airline#extensions#tabline#enabled = 1
 "/ Netrw - built in
 "/
 let g:netrw_banner = 0          " enable/disable banner
-let g:netrw_liststyle = 3       " expand directorories instead of opening in a new tab
+let g:netrw_liststyle = 3       " expand directories instead of opening in a new tab
 let g:netrw_browse_split = 4    " open in previous window to the right
 let g:netrw_altv = 1          
-let g:netrw_winsize = 15        " set the width of the window
+let g:netrw_winsize = 40        " set the width of the window
 
 " open with space n
 nmap <Leader>n :Lexplore<cr>
 
+"/
+"/ Nvim Tree
+"/
+let g:nvim_tree_side = 'left' 
+let g:nvim_tree_width = 40 
+let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache' ]
+let g:nvim_tree_gitignore = 1 
+let g:nvim_tree_auto_open = 1 " opens the tree when typing `vim $DIR` or `vim`
+let g:nvim_tree_auto_close = 1 " closes the tree when it's the last window
+let g:nvim_tree_auto_ignore_ft = [] " don't auto open tree on specific filetypes.
+let g:nvim_tree_quit_on_open = 0 " closes the tree when you open a file
+let g:nvim_tree_follow = 1 " this option allows the cursor to be updated when entering a buffer
+let g:nvim_tree_indent_markers = 1 " this option shows indent markers when folders are open
+let g:nvim_tree_hide_dotfiles = 0 " this option hides files and folders starting with a dot `.`
+let g:nvim_tree_git_hl = 1 " will enable file highlight for git attributes (can be used without the icons).
+let g:nvim_tree_highlight_opened_files = 1 " will enable folder and file icon highlight for opened files/directories.
+let g:nvim_tree_tab_open = 1 " will open the tree when entering a new tab and the tree was previously open
+let g:nvim_tree_auto_resize = 1 " will resize the tree to its saved width when opening a file
+let g:nvim_tree_disable_netrw = 0 " disables netrw
+let g:nvim_tree_hijack_netrw = 0 " prevents netrw from automatically opening when opening directories (but lets you keep its other utilities)
+let g:nvim_tree_group_empty = 1 " compact folders that only contain a single folder into one node in the file tree
+let g:nvim_tree_hijack_cursor = 0 "1 by default, when moving cursor in the tree, will position the cursor at the start of the file on the current line
+let g:nvim_tree_update_cwd = 1 " will update the tree cwd when changing nvim's directory (DirChanged event). Behaves strangely with autochdir set.
+
+let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 0,
+    \ 'files': 0,
+    \ 'folder_arrows': 0,
+    \ }
+
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
 "}}}
 
 "{{{ Folding
