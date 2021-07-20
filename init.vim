@@ -48,15 +48,8 @@ set complete=.,w,b,u   			                    " Autocomplete setting
 "{{{ Visuals
 set t_CO=256							        " Use 256 colors. This is useful for Terminal Vim.
 set termguicolors                 " enable true colors support
-colorscheme intellij
+colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
-"}}}
-
-"{{{ Neovide
-set guifont=SourceCodePro\ Nerd\ Font:h16
-set mouse=a
-let g:neovide_fullscreen=v:true
-let g:neovide_cursor_antialiasing=v:true
 "}}}
 
 "{{{ Search
