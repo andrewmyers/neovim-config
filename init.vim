@@ -158,9 +158,6 @@ let g:netrw_browse_split = 4    " open in previous window to the right
 let g:netrw_altv = 1          
 let g:netrw_winsize = 40        " set the width of the window
 
-" open with space n
-nmap <Leader>n :Lexplore<cr>
-
 "/
 "/ Nvim Tree
 "/
@@ -193,7 +190,7 @@ let g:nvim_tree_show_icons = {
     \ 'folder_arrows': 0,
     \ }
 
-nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <Leader>n :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 "}}}
 
